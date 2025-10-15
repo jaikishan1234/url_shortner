@@ -12,7 +12,10 @@ import cors from "cors"
 dotenv.config({ path: "./.env" });
 
 const app = express();
-app.use(cors())
+app.use(cors({
+  origin: "http://localhost:5173", // frontend URL (Vite default)
+  credentials: true,               // allow cookies/auth headers
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
