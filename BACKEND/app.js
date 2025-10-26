@@ -13,6 +13,7 @@ import cookieParser from "cookie-parser"
 dotenv.config({ path: "./.env" });
 
 const app = express();
+
 app.use(cors({
   origin: "http://localhost:5173", // frontend URL (Vite default)
   credentials: true,               // allow cookies/auth headers
